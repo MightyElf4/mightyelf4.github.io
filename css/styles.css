@@ -1,21 +1,70 @@
+/* Universal styles */
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box; 
 }
 
+/* Styles for the body element */
 body {
-    background-color: #6DA1B8;
+    background-color: #5fecfc;
 }
 
-.header {
-    display: flexbox;
+/* Styles for paragraph elements */
+p {
+    padding: 10px;
 }
 
+/* Styles for the header */
+header {
+    display: flex;
+    height: 100px;
+    border: 2px solid #FCCB60;
+    background-color: #FDBF90;
+    justify-content: center;
+    color: #41595C;
+}
+
+/* Styles for the page titles in the header */
 .title {
-    
+    flex: 1;
+    border: 2px solid #FCCB60;
+    height: 100px;
+    width: 200px;
+    padding: 10px;
+    flex: auto; 
+    align-content: center;
 }
 
+/* Styles for the page links in the header */
 .page-link {
+    flex: 1;
+    border: 2px solid #FCCB60;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    align-content: center;
+}
 
+/* Styles for service div*/
+.service {
+    display: flex;
+}
+
+/* Styles for service content */
+.service-content{
+    padding: 10px;
+    flex-direction: column;
+    width: 300px;
+}
+
+/* Styles for Peace Corps Goals list */
+.pc-goals {
+    padding: 20px;
+    flex: 1;
+}
+
+/* Styles for items in Peace Corps Goals list */
+.pc-goals li{
+    padding: 10px;
 }
