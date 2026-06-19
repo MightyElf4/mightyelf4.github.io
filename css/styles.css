@@ -27,7 +27,6 @@ header {
 
 /* Styles for the page titles in the header */
 .title {
-    flex: 1;
     border: 2px solid #FCCB60;
     height: 100px;
     width: 200px;
@@ -47,16 +46,29 @@ header {
 }
 
 /* Styles for service div*/
-.service {
+.service,
+.background,
+.interests {
     display: flex;
+    flex-direction: row;
 }
 
-/* Styles for service content */
-.service-content{
+/* Styles for service content */ 
+.service-content,
+.background-content,
+.interests-content {
     padding: 10px;
+    display: flex;
     flex-direction: column;
-    width: 300px;
+    max-width: 500px;
 }
+
+
+/* style for background image
+.background-img {
+    max-width: 300px;
+}
+*/
 
 /* Styles for Peace Corps Goals list */
 .pc-goals {
@@ -68,3 +80,71 @@ header {
 .pc-goals li{
     padding: 10px;
 }
+
+/* Styles for service slideshow container */
+.slideshow-container {
+    max-width: 300px;
+    position: relative;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+}
+
+.img-text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 20px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.number-text {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 5s;
+}
+
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+}
+
+
+/* Styles for Interests */
+
+
+/* Styles for interest headers */
+
+
+/* Styles for interest lists */
+
+
+/* Styles for recipes page */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

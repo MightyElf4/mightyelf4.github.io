@@ -7,25 +7,42 @@
     <title>About Me</title>
 
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
 </head>
 
 <body>
     <header>
             <h1 class="title">About Me</h1>
-            <a href="./index.html" class="page-link">Home</a>
-            <a href="./recipes.html" class="page-link">Recipes</a>
+            <nav>
+                <a href="./index.html" class="page-link">Home</a>
+                <a href="./recipes.html" class="page-link">Recipes</a>
+            </nav>
     </header>
 
     <main>
+
+
         <div class="background"> <!--a section to talk about my background-->
-            <h2>Background</h2>
-            <p>
-                Born and raised in Fort Worth, Texas, I spent most of my first 23 years of life around the DFW area. In May of 2025, I graduated from the University of Texas at Arlington with a Bachelor of Arts in English (and a minor in technical communication). In March of 2026, I left DFW to serve as an English education volunteer with Peace Corps Costa Rica (PCCR).
-            </p>
-            <p>
-                I am the middle of three children, the child of two hard working parents, and a  self-designated "glue guy". Growing up, I was blessed to not only be given opportunity, but to be given role-models. Looking to, leaning on, and learning from the people in my life inspired me to want to dedicate my life to helping others. 
-            </p>
+            <div class="background-content">
+                <h2>Background</h2>
+                <p>
+                    Born and raised in Fort Worth, Texas, I spent most of my first 23 years of life around the DFW area. In May of 2025, I graduated from the University of Texas at Arlington with a Bachelor of Arts in English (and a minor in technical communication). In March of 2026, I left DFW to serve as an English education volunteer with Peace Corps Costa Rica (PCCR).
+                </p>
+                <p>
+                    I am the middle of three children, the child of two hard working parents, and a  self-designated "glue guy". Growing up, I was blessed to not only be given opportunity, but to be given role-models. Looking to, leaning on, and learning from the people in my life inspired me to want to dedicate my life to helping others. 
+                </p>
+            </div>
+           <!-- 
+            <div class="background-img">
+                <img src="./img/swearing-in-day.jpeg" style="width:100%">
+                <div class="img-text">Me on Swearing-In Day.</div>
+            </div>
+            --> 
+
         </div>
+
+
+
         <div class="service"> <!--a section to talk about Peace Corps service-->
             <div class="service-content">
                 <h3>Service</h3>
@@ -50,46 +67,58 @@
                     For me, service has already had such a positive impact on my life. Costa Rica is a beautiful country, and I have made many meaningful connections here. For me, service is not only about helping others, but additionally, helping me increase and reinforce my ability to do so. After service ends, I plan on continuing my education and continuing to be a resource for my community.
                 </p>
             </div>
+
             <div class="slideshow-container">
 
                 <div class="slides fade">
-                    <img src="./img/swearing-in-day.jpeg" style="width:100%">
-                    <div class="img-text">Me on Swearing-In Day.</div>
-                </div>
-
-                <div class="slides fade">
+                    <div class="number-text">1 / 5</div>
                     <img src="./img/walk-to-work.jpeg" style="width:100%">
                     <div class="img-text">My walk to work in Escazú</div>
                 </div>
 
                 <div class="slides fade">
+                    <div class="number-text">2 / 5</div>
                     <img src="./img/costa-rican-sunrise.jpeg" style="width:100%">
                     <div class="img-text">Sunrise from my host-family's house.</div>
                 </div>
 
                 <div class="slides fade">
+                    <div class="number-text">3 / 5</div>
                     <img src="./img/cow-from-hike.jpeg" style="width:100%">
                     <div class="img-text">A cow in the hills.</div>
                 </div>
 
                 <div class="slides fade">
+                    <div class="number-text">4 / 5</div>
                     <img src="./img/tree-with-pink-flowers.jpeg" style="width:100%">
                     <div class="img-text">A Pink Trumpet Tree (<em>Roble de Sabana</em>)</div>
                 </div>
 
                 <div class="slides fade">
+                    <div class="number-text">5 / 5</div>
                     <img src="./img/clouds-from-plane.jpeg" style="width:100%">
                     <div class="img-text">The clouds above Costa Rica during my flight in.</div>
                 </div>
+            </div>  
 
-            </div>
         </div>
         
         <div class="interests"> <!--a section to talk about my interests-->
-            <h3>Interests/Hobbies/Skills</h3>
-            <p>
-            
-            </p>
+            <div class="interests-content">
+                <h3>Interests/Hobbies</h3>
+                <ul class="interest-list">
+                    <li>Cooking 🍲</li>
+                    <li>Reading 📚️</li>
+                    <li>Sports 🏈</li>
+                </ul>
+
+                <h3>Things I Want To Learn More About</h3>
+                <ul class="want-to-learn-list">
+                    <li>Beekeeping 🐝</li>
+                    <li>Gardening 🌱</li>
+                    <li>Programming 👾</li>
+                </ul>
+            </div>
         </div>
     </main>
 
