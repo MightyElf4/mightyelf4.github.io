@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Favorite Foods</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/data.js"></script>
     <script src="./js/script.js" defer></script>
 </head>
 
@@ -42,10 +44,25 @@
         </p>
     </div>
 
+    <div id="recipe-grid" class="card-grid"></div>
+
    </main>
 
-   <footer>
+    <footer>
+        <nav class="footer-nav">
+            <a href="https://github.com/MightyElf4" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://instagram.com/landry.u4/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://linkedin.com/in/landry-u-09743a303" target="_blank" rel="noreferrer">LinkedIn</a>
+        </nav>
 
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="form-message"></p>
    </footer>
 </body>
 

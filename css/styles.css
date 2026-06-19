@@ -1,150 +1,454 @@
-/* Universal styles */
+/* ── Global reset ── */
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Styles for the body element */
+/* ── Base styles ── */
 body {
-    background-color: #5fecfc;
+  background-color: #f9f9f9;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  color: #2e2e2e;
 }
 
-/* Styles for paragraph elements */
 p {
-    padding: 10px;
+  padding: 10px 0;
+  line-height: 1.7;
 }
 
-/* Styles for the header */
+a {
+  color: #41595C;
+  text-decoration: none;
+}
+
+/* ── Header ── */
 header {
-    display: flex;
-    height: 100px;
-    border: 2px solid #FCCB60;
-    background-color: #FDBF90;
-    justify-content: center;
-    color: #41595C;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 24px;
+  background-color: #FCA460;
+  border-bottom: 3px solid #FCCB60;
 }
 
-/* Styles for the page titles in the header */
 .title {
-    border: 2px solid #FCCB60;
-    height: 100px;
-    width: 200px;
-    padding: 10px;
-    flex: auto; 
-    align-content: center;
+  flex: 1;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2e2e2e;
 }
 
-/* Styles for the page links in the header */
+/* ── Header nav ── */
+header nav {
+  display: flex;
+  gap: 12px;
+}
+
 .page-link {
-    flex: 1;
-    border: 2px solid #FCCB60;
-    height: 100px;
-    width: 100px;
-    padding: 10px;
-    align-content: center;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #f9f9f9;
+  border: 2px solid #FCCB60;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #2e2e2e;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
-/* Styles for service div*/
-.service,
+.page-link:hover {
+  background-color: #60FCB7;
+  border-color: #60FCB7;
+}
+
+.page-link.active {
+  background-color: #FCCB60;
+  border-color: #FCA460;
+}
+
+/* ── Main content ── */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #2e2e2e;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 16px 0 8px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 12px 0 6px;
+}
+
+/* ── About page sections ── */
 .background,
+.service,
 .interests {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 32px;
 }
 
-/* Styles for service content */ 
-.service-content,
+.service {
+  align-items: center;
+}
+
 .background-content,
+.service-content,
 .interests-content {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
+  flex: 1;
+  padding: 10px 0;
 }
 
-
-/* style for background image
-.background-img {
-    max-width: 300px;
-}
-*/
-
-/* Styles for Peace Corps Goals list */
+/* ── Peace Corps goals list ── */
 .pc-goals {
-    padding: 20px;
-    flex: 1;
+  padding: 20px;
 }
 
-/* Styles for items in Peace Corps Goals list */
-.pc-goals li{
-    padding: 10px;
+.pc-goals li {
+  padding: 8px 0;
+  line-height: 1.6;
 }
 
-/* Styles for service slideshow container */
+/* ── Slideshow ── */
 .slideshow-container {
-    max-width: 300px;
-    position: relative;
-    margin: auto;
+  max-width: 300px;
+  position: relative;
+  flex-shrink: 0;
+  border: 3px solid #FCCB60;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 .slides {
-    display: none;
+  display: none;
+  position: relative;
+}
+
+.slides img {
+  border-radius: 7px 7px 0 0;
+  display: block;
 }
 
 .img-text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 20px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
+  color: #f2f2f2;
+  font-size: 14px;
+  padding: 24px 12px 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.55));
 }
 
 .number-text {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
+  display: none;
 }
 
 .fade {
-    animation-name: fade;
-    animation-duration: 5s;
+  animation-name: fade;
+  animation-duration: 1s;
 }
 
 @keyframes fade {
-    from {opacity: .2}
-    to {opacity: 1}
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0;
+  background-color: #f9f9f9;
+  border-radius: 0 0 7px 7px;
+}
 
-/* Styles for Interests */
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #FCCB60;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
 
+.dot.active {
+  opacity: 1;
+  background-color: #FCA460;
+}
 
-/* Styles for interest headers */
+/* ── Footer ── */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background-color: #77A2A7;
+  border-top: 3px solid #5FEBFC;
+}
 
+/* ── Footer social links ── */
+.footer-nav {
+  display: flex;
+  gap: 16px;
+}
 
-/* Styles for interest lists */
+.footer-nav a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #f9f9f9;
+  border: 2px solid #5FEBFC;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #2e2e2e;
+  transition: background-color 0.2s, border-color 0.2s;
+}
 
+.footer-nav a:hover {
+  background-color: #60FCB7;
+  border-color: #60FCB7;
+}
 
-/* Styles for recipes page */
+/* ── Contact form ── */
+#contact-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+#contact-form input,
+#contact-form textarea {
+  padding: 8px 12px;
+  border: 2px solid #5FEBFC;
+  border-radius: 6px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  background-color: #f9f9f9;
+}
 
+#contact-form textarea {
+  width: 100%;
+  min-height: 80px;
+  resize: vertical;
+}
 
+#contact-form button {
+  padding: 8px 20px;
+  background-color: #FCA460;
+  border: 2px solid #FCCB60;
+  border-radius: 6px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #2e2e2e;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
 
+#contact-form button:hover {
+  background-color: #60FCB7;
+  border-color: #60FCB7;
+}
 
+#form-message {
+  font-size: 0.9rem;
+  color: #f9f9f9;
+  font-weight: 600;
+}
 
+/* ── Slideshow buttons ── */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(252, 164, 96, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.2s;
+}
 
+.prev-btn { left: 4px; }
+.next-btn { right: 4px; }
 
+.slide-btn:hover { background-color: #60FCB7; }
 
+/* ── Recipe / content cards ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
 
+.card {
+  background-color: #ffffff;
+  border: 2px solid #5FEBFC;
+  border-radius: 8px;
+  overflow: hidden;
+}
 
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
 
+.card-body {
+  padding: 16px;
+}
 
+.card-body h3 {
+  margin: 0 0 8px;
+}
 
+.card-body p {
+  font-size: 0.9rem;
+  color: #41595C;
+  padding: 0;
+}
 
+.card-times {
+  display: flex;
+  gap: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #77A2A7;
+  margin-bottom: 8px;
+}
 
+.card-ingredients {
+  margin: 10px 0;
+  padding-left: 18px;
+  font-size: 0.85rem;
+  color: #2e2e2e;
+}
 
+.card-ingredients li {
+  padding: 2px 0;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #5FEBFC;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2e2e2e;
+}
+
+.card-sources {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.card-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #FCA460;
+  text-decoration: underline;
+}
+
+.card-link:hover {
+  color: #60FCB7;
+}
+
+/* ── Filter buttons ── */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.filter-btn {
+  padding: 6px 14px;
+  background-color: #f9f9f9;
+  border: 2px solid #FCCB60;
+  border-radius: 6px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #FCCB60;
+  border-color: #FCA460;
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .background,
+  .service,
+  .interests {
+    flex-direction: column;
+  }
+
+  .slideshow-container {
+    max-width: 100%;
+  }
+
+  header {
+    height: auto;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  #contact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #contact-form input,
+  #contact-form textarea,
+  #contact-form button {
+    width: 100%;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

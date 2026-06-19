@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/script.js" defer></script>
 </head>
@@ -69,36 +70,39 @@
             </div>
 
             <div class="slideshow-container">
+                <button class="slide-btn prev-btn" onclick="changeSlide(-1)">&#8249;</button>
 
                 <div class="slides fade">
                     <div class="number-text">1 / 5</div>
-                    <img src="./img/walk-to-work.jpeg" style="width:100%">
+                    <img src="./img/walk-to-work.jpeg" alt="My walk to work in Escazú, Costa Rica" style="width:100%">
                     <div class="img-text">My walk to work in Escazú</div>
                 </div>
 
                 <div class="slides fade">
                     <div class="number-text">2 / 5</div>
-                    <img src="./img/costa-rican-sunrise.jpeg" style="width:100%">
+                    <img src="./img/costa-rican-sunrise.jpeg" alt="Sunrise from my host-family's house in Costa Rica" style="width:100%">
                     <div class="img-text">Sunrise from my host-family's house.</div>
                 </div>
 
                 <div class="slides fade">
                     <div class="number-text">3 / 5</div>
-                    <img src="./img/cow-from-hike.jpeg" style="width:100%">
+                    <img src="./img/cow-from-hike.jpeg" alt="A cow in the hills of Costa Rica" style="width:100%">
                     <div class="img-text">A cow in the hills.</div>
                 </div>
 
                 <div class="slides fade">
                     <div class="number-text">4 / 5</div>
-                    <img src="./img/tree-with-pink-flowers.jpeg" style="width:100%">
+                    <img src="./img/tree-with-pink-flowers.jpeg" alt="A Pink Trumpet Tree (Roble de Sabana) in Costa Rica" style="width:100%">
                     <div class="img-text">A Pink Trumpet Tree (<em>Roble de Sabana</em>)</div>
                 </div>
 
                 <div class="slides fade">
                     <div class="number-text">5 / 5</div>
-                    <img src="./img/clouds-from-plane.jpeg" style="width:100%">
+                    <img src="./img/clouds-from-plane.jpeg" alt="Clouds above Costa Rica seen from the plane during my flight in" style="width:100%">
                     <div class="img-text">The clouds above Costa Rica during my flight in.</div>
                 </div>
+
+                <button class="slide-btn next-btn" onclick="changeSlide(1)">&#8250;</button>
             </div>  
 
         </div>
@@ -123,8 +127,21 @@
     </main>
 
     <footer>
+        <nav class="footer-nav">
+            <a href="https://github.com/MightyElf4" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://instagram.com/landry.u4/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://linkedin.com/in/landry-u-09743a303" target="_blank" rel="noreferrer">LinkedIn</a>
+        </nav>
 
-    </footer>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="form-message"></p>
+   </footer>
 </body>
 
 </html>
