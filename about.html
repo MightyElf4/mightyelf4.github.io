@@ -5,60 +5,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <link href="./css/styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="title">About Me</h1>
-        <a href="./index.html" class="page-link">Home</a>
-        <a href="./recipes.html" class="page-link">Recipes</a>
+    <header>
+            <h1 class="title">About Me</h1>
+            <nav>
+                <a href="./index.html" class="page-link">Home</a>
+                <a href="./recipes.html" class="page-link">Recipes</a>
+            </nav>
     </header>
 
     <main>
-        <div class="background"> <!--a section to talk about my background-->
-            <h2>Background</h2>
-            <p>
-                Born and raised in Fort Worth, Texas, I spent most of my first 23 years of life around the DFW area. In May of 2025, I graduated from the University of Texas at Arlington with a Bachelor of Arts in English (and a minor in technical communication). In March of 2026, I left DFW to serve as an English education volunteer with Peace Corps Costa Rica (PCCR).
-            </p>
-            <p>
-                I am the middle of three children, the child of two hard working parents, and a  self-designated "glue guy". Growing up, I was blessed to not only be given opportunity, but to be given role-models. Looking to, leaning on, and learning from the people in my life inspired me to want to dedicate my life to helping others. 
-            </p>
-        </div>
-        <div class="service"> <!--a section to talk about Peace Corps service-->
-            <h3>Service</h3>
-            <p>
-                In Costa Rica, my job is not only to teach English, but to be a <strong>human resource</strong> and understand the needs of my community in order to help create <em>sustainable</em> change. Service is simultaneously a challenge and an opportunity, and I am committed to making the most of it.
-            </p>
-            <div>
-                <h4>The Three Goals of the <a href="https://www.peacecorps.gov/what-we-do/our-mission/" target="_blank" rel="noreferrer">Peace Corps</a></h4>
-                <ol>
-                    <li>
-                        To help the countries interested in meeting their need for trained people.
-                    </li>
-                    <li>
-                        To help promote a better understanding of Americans on the part of the peoples served.
-                    </li>
-                    <li>
-                        To help promote a better understanding of other peoples on the part of Americans.
-                    </li>
-                </ol>
-            </div>
-            <p>
-                For me, service has already had such a positive impact on my life. Costa Rica is a beautiful country, and I have made many meaningful connections here. For me, service is not only about helping others, but additionally, helping me increase and reinforce my ability to do so. After service ends, I plan on continuing my education and continuing to be a resource for my community.
-            </p>
-        </div>
-        <div class="interests"> <!--a section to talk about my interests-->
-            <h3>Interests/Hobbies/Skills</h3>
-            <p>
 
-            </p>
+
+        <div class="background"> <!--a section to talk about my background-->
+            <div class="background-content">
+                <h2>Background</h2>
+                <p>
+                    Born and raised in Fort Worth, Texas, I spent most of my first 23 years of life around the DFW area. In May of 2025, I graduated from the University of Texas at Arlington with a Bachelor of Arts in English (and a minor in technical communication). In March of 2026, I left DFW to serve as an English education volunteer with Peace Corps Costa Rica (PCCR).
+                </p>
+                <p>
+                    I am the middle of three children, the child of two hard working parents, and a  self-designated "glue guy". Growing up, I was blessed to not only be given opportunity, but to be given role-models. Looking to, leaning on, and learning from the people in my life inspired me to want to dedicate my life to helping others. 
+                </p>
+            </div>
+           <!-- 
+            <div class="background-img">
+                <img src="./img/swearing-in-day.jpeg" style="width:100%">
+                <div class="img-text">Me on Swearing-In Day.</div>
+            </div>
+            --> 
+
+        </div>
+
+
+
+        <div class="service"> <!--a section to talk about Peace Corps service-->
+            <div class="service-content">
+                <h3>Service</h3>
+                <p>
+                    In Costa Rica, my job is not only to teach English, but to be a <strong>human resource</strong> and understand the needs of my community in order to help create <em>sustainable</em> change. Service is simultaneously a challenge and an opportunity, and I am committed to making the most of it.
+                </p>
+                <div>
+                    <h4>The Three Goals of the <a href="https://www.peacecorps.gov/what-we-do/our-mission/" target="_blank" rel="noreferrer">Peace Corps</a></h4>
+                    <ol class="pc-goals">
+                        <li class="li">
+                            To help the countries interested in meeting their need for trained people.
+                        </li>
+                        <li class="li">
+                            To help promote a better understanding of Americans on the part of the peoples served.
+                        </li>
+                        <li class="li">
+                            To help promote a better understanding of other peoples on the part of Americans.
+                        </li>
+                    </ol>
+                </div>
+                <p>
+                    For me, service has already had such a positive impact on my life. Costa Rica is a beautiful country, and I have made many meaningful connections here. For me, service is not only about helping others, but additionally, helping me increase and reinforce my ability to do so. After service ends, I plan on continuing my education and continuing to be a resource for my community.
+                </p>
+            </div>
+
+            <div class="slideshow-container">
+                <button class="slide-btn prev-btn" onclick="changeSlide(-1)">&#8249;</button>
+
+                <div class="slides fade">
+                    <div class="number-text">1 / 5</div>
+                    <img src="./img/walk-to-work.jpeg" alt="My walk to work in Escazú, Costa Rica" style="width:100%">
+                    <div class="img-text">My walk to work in Escazú</div>
+                </div>
+
+                <div class="slides fade">
+                    <div class="number-text">2 / 5</div>
+                    <img src="./img/costa-rican-sunrise.jpeg" alt="Sunrise from my host-family's house in Costa Rica" style="width:100%">
+                    <div class="img-text">Sunrise from my host-family's house.</div>
+                </div>
+
+                <div class="slides fade">
+                    <div class="number-text">3 / 5</div>
+                    <img src="./img/cow-from-hike.jpeg" alt="A cow in the hills of Costa Rica" style="width:100%">
+                    <div class="img-text">A cow in the hills.</div>
+                </div>
+
+                <div class="slides fade">
+                    <div class="number-text">4 / 5</div>
+                    <img src="./img/tree-with-pink-flowers.jpeg" alt="A Pink Trumpet Tree (Roble de Sabana) in Costa Rica" style="width:100%">
+                    <div class="img-text">A Pink Trumpet Tree (<em>Roble de Sabana</em>)</div>
+                </div>
+
+                <div class="slides fade">
+                    <div class="number-text">5 / 5</div>
+                    <img src="./img/clouds-from-plane.jpeg" alt="Clouds above Costa Rica seen from the plane during my flight in" style="width:100%">
+                    <div class="img-text">The clouds above Costa Rica during my flight in.</div>
+                </div>
+
+                <button class="slide-btn next-btn" onclick="changeSlide(1)">&#8250;</button>
+            </div>  
+
+        </div>
+        
+        <div class="interests"> <!--a section to talk about my interests-->
+            <div class="interests-content">
+                <h3>Interests/Hobbies</h3>
+                <ul class="interest-list">
+                    <li>Cooking 🍲</li>
+                    <li>Reading 📚️</li>
+                    <li>Sports 🏈</li>
+                </ul>
+
+                <h3>Things I Want To Learn More About</h3>
+                <ul class="want-to-learn-list">
+                    <li>Beekeeping 🐝</li>
+                    <li>Gardening 🌱</li>
+                    <li>Programming 👾</li>
+                </ul>
+            </div>
         </div>
     </main>
 
     <footer>
+        <nav class="footer-nav">
+            <a href="https://github.com/MightyElf4" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://instagram.com/landry.u4/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://linkedin.com/in/landry-u-09743a303" target="_blank" rel="noreferrer">LinkedIn</a>
+        </nav>
 
-    </footer>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="form-message"></p>
+   </footer>
 </body>
 
 </html>
