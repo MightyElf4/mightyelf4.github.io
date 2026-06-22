@@ -7,6 +7,38 @@ document.querySelectorAll('.page-link').forEach(link => {
   }
 });
 
+// ── Mobile nav hamburger ──
+const navEl = document.querySelector('header nav');
+if (navEl) {
+  const navToggle = document.createElement('button');
+  navToggle.id = 'nav-toggle';
+  navToggle.textContent = '☰';
+  navToggle.setAttribute('aria-label', 'Open navigation');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navEl.before(navToggle);
+
+  function closeNav() {
+    navEl.classList.remove('open');
+    navToggle.textContent = '☰';
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open navigation');
+  }
+
+  navToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    const isOpen = navEl.classList.toggle('open');
+    navToggle.textContent = isOpen ? '✕' : '☰';
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+  });
+
+  navEl.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
+
+  document.addEventListener('click', e => {
+    if (!navEl.contains(e.target) && e.target !== navToggle) closeNav();
+  });
+}
+
 // ── Language toggle ──
 function applyLanguage(lang) {
   const strings = (typeof i18n !== 'undefined') ? i18n[lang] : null;

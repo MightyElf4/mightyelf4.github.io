@@ -418,7 +418,7 @@ footer {
   border-top: 4px solid var(--cyan);
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .card:hover {
@@ -627,6 +627,29 @@ footer {
   }
 }
 
+/* ── Smooth theme transition ── */
+body,
+header,
+footer,
+.page-link,
+.filter-btn,
+.footer-nav a,
+#contact-form input,
+#contact-form textarea,
+#contact-form button,
+.dot,
+.dots-container,
+.interest-list li,
+.want-to-learn-list li,
+.tag {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ── Hamburger button (hidden on desktop) ── */
+#nav-toggle {
+  display: none;
+}
+
 /* ── Utility toggles (lang + theme) — pill shape, cyan border ── */
 #lang-toggle,
 #theme-toggle {
@@ -657,6 +680,61 @@ body {
 
 /* ── Mobile ── */
 @media (max-width: 700px) {
+  body {
+    padding-top: 68px;
+  }
+
+  header {
+    height: auto;
+    padding: 12px 16px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  /* ── Hamburger button ── */
+  #nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--nav-bg);
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+    font-size: 1.3rem;
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  /* ── Nav dropdown ── */
+  header nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 16px;
+    background-color: var(--nav-bg);
+    border-bottom: 3px solid var(--gold);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    z-index: 99;
+  }
+
+  header nav.open {
+    display: flex;
+  }
+
+  header nav .page-link {
+    display: block;
+    text-align: center;
+  }
+
+  /* ── Section layouts ── */
   .background,
   .service,
   .interests {
@@ -667,21 +745,7 @@ body {
     max-width: 100%;
   }
 
-  body {
-    padding-top: 130px;
-  }
-
-  header {
-    height: auto;
-    padding: 12px 16px;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .title {
-    font-size: 1.2rem;
-  }
-
+  /* ── Contact form ── */
   #contact-form {
     flex-direction: column;
     align-items: stretch;
@@ -692,7 +756,6 @@ body {
   #contact-form button {
     width: 100%;
   }
-
 }
 
 /* ── Print ── */
