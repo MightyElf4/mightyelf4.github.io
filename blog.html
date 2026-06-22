@@ -4,46 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Landry Underhill's personal portfolio — English education volunteer with Peace Corps Costa Rica, programmer, and cooking enthusiast.">
+    <meta name="description" content="Landry Underhill's blog — thoughts on Peace Corps service, programming, and life.">
     <meta name="author" content="Landry Underhill">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Landry Underhill">
-    <meta property="og:description" content="Landry Underhill's personal portfolio — English education volunteer with Peace Corps Costa Rica, programmer, and cooking enthusiast.">
-    <meta property="og:url" content="https://mightyelf4.github.io/">
+    <meta property="og:title" content="Blog — Landry Underhill">
+    <meta property="og:description" content="Landry Underhill's blog — thoughts on Peace Corps service, programming, and life.">
+    <meta property="og:url" content="https://mightyelf4.github.io/blog.html">
     <meta property="og:site_name" content="Landry Underhill">
     <meta property="og:image" content="https://mightyelf4.github.io/img/swearing-in-day.jpeg">
-    <title>Landry Underhill</title>
+    <title>Blog — Landry Underhill</title>
 
     <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/data.js"></script>
     <script src="./js/i18n.js"></script>
     <script src="./js/script.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1 class="title" data-i18n="index-title">Welcome</h1>
+        <h1 class="title" data-i18n="blog-title">Blog</h1>
         <nav>
+            <a href="./index.html" class="page-link" data-i18n="nav-home">Home</a>
             <a href="./about.html" class="page-link" data-i18n="nav-about">About Me</a>
             <a href="./recipes.html" class="page-link" data-i18n="nav-recipes">Recipes</a>
             <a href="./projects.html" class="page-link" data-i18n="nav-projects">Projects</a>
-            <a href="./blog.html" class="page-link" data-i18n="nav-blog">Blog</a>
         </nav>
     </header>
 
     <main>
-        <h2 data-i18n="index-h2">What are you looking at?</h2>
-        <p data-i18n="index-p1">
-            Well, I'll tell you...
-        </p>
-        <p data-i18n="index-p2">
-            This website acts as both a portfolio project and my portfolio itself. Here, you can find personal information about me, look at my project history, and get in contact with me.
-        </p>
-        <p data-i18n="index-p3">
-            The idea is, as I grow as a programmer, this website will grow with me. This is really the first website that I have built from scratch, and I am excited to see how it evolves over time.
-        </p>
-
+        <div id="blog-grid" class="card-grid"></div>
     </main>
 
     <footer>
@@ -62,7 +53,7 @@
             <button type="submit" data-i18n="form-submit">Send</button>
         </form>
         <p id="form-message"></p>
-   </footer>
+    </footer>
 </body>
 
 </html>
